@@ -1,0 +1,1331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="cache-control" content="no-cache" />
+      <meta http-equiv="pragma" content="no-cache" />
+      <meta name="csrf-token" content="5Z5L0K9ClukbFs6xw9Ynoep33vbyPlqVw2sPc6ns">
+      <title>Chhotubhai Gopalbhai Patel Institute of Technology - Chatbot : DN</title>
+
+      <link href="https://cgpit-bardoli.edu.in//css/app.css" rel="stylesheet">
+      <link rel="icon" href="{% static 'images/download.jpg' %}" type="image/png">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link href="https://cgpit-bardoli.edu.in//css/style1.css" rel="stylesheet" media="all">
+      <link href="https://cgpit-bardoli.edu.in//css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+      <link href="https://cgpit-bardoli.edu.in//css/fileinput.css" media="all" rel="stylesheet" type="text/css" />
+      <script src="https://cgpit-bardoli.edu.in//js/jquery.min.js"></script>
+      <script src="https://cgpit-bardoli.edu.in//js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
+      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+      <!-- <link href="https://cgpit-bardoli.edu.in//css/bootstrap.min.css" rel="stylesheet"> -->
+<style>
+#menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+#menu .main-menu {
+  display: none;
+}
+
+#tm:checked + .main-menu {
+  display: block;
+  height:400px;
+  overflow-y:scroll;
+}
+
+#menu input[type="checkbox"], 
+#menu ul span.drop-icon {
+  display: none;
+}
+
+#menu li, 
+#toggle-menu, 
+#menu .sub-menu {
+  border-style: solid;
+  border-color: rgba(0, 0, 0, .05);
+}
+
+#menu li, 
+#toggle-menu {
+  border-width: 0 0 1px;
+}
+
+#menu .sub-menu {
+  background-color: #002147;
+  border-width: 1px 1px 0;
+  margin: 0 1em;
+}
+
+#menu .sub-menu li:last-child {
+  border-width: 0;
+}
+
+#menu li, 
+#toggle-menu, 
+#menu a {
+  position: relative;
+  display: block;
+  color: #fecb1c;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .125);
+}
+
+#menu, 
+#toggle-menu {
+  background-color: #002147;
+}
+
+#toggle-menu, 
+#menu a {
+  padding: 1em 1.5em;
+}
+
+#menu a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+}
+
+#menu a:hover {
+  background-color: white;
+  color: #002147;
+}
+
+#menu .sub-menu {
+  display: none;
+}
+
+#menu input[type="checkbox"]:checked + .sub-menu {
+  display: block;
+}
+
+#menu .sub-menu a:hover {
+  color: #002147;
+}
+#toggle-menu
+{
+  top: 22px;
+}
+#toggle-menu .drop-icon, 
+#menu li label.drop-icon {
+  position: absolute;
+  right: 1.5em;
+  top: 1.25em;
+}
+
+#menu label.drop-icon, #toggle-menu span.drop-icon {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  background-color: #fecb1c;
+  text-shadow: 0 0 0 transparent;
+  color: rgba(255, 255, 255, .75);
+}
+#menu .drop-icon {
+  line-height: 1;
+}
+
+@media  only screen and (max-width: 74em) and (min-width: 64.01em) {
+  #menu li {
+    width: 33.333%;
+  }
+  #menu .sub-menu li {
+    width: auto;
+  }
+}
+
+@media  only screen and (min-width: 64em) {
+  #menu .main-menu {
+    display: block;
+  }
+  
+  #toggle-menu, 
+  #menu label.drop-icon {
+    display: none;
+  }  
+  #menu ul span.drop-icon {
+    display: inline-block;
+  }
+    
+  #menu li {
+    float: left;
+    border-width: 0 1px 0 0;
+  } 
+
+  #menu .sub-menu li {
+    float: none;
+  }
+
+  #menu .sub-menu {
+    border-width: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+    z-index: 3000;
+  }
+
+  #menu .sub-menu, 
+  #menu input[type="checkbox"]:checked + .sub-menu {
+    display: none;
+  }
+    #menu .sub-menu li {
+    border-width: 0 0 1px;
+  }
+  #menu .sub-menu .sub-menu {
+    top: 0;
+    left: 100%;
+  }
+  #menu li:hover > input[type="checkbox"] + .sub-menu {
+    display: block;
+  }
+  .isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+}
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #002147;
+  color: white;
+  {% comment %} padding: 16px 20px; {% endcomment %}
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 75px;
+  height:75px;
+  z-index:9;
+  border-radius: 24px;
+  font-size:25px;
+  float:middle;
+  box-shadow:0 0 12px #ffc107;
+}
+
+.open-button:hover{
+  background-color: red;
+  color: #ffc107;
+  {% comment %} padding: 16px 20px; {% endcomment %}
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 75px;
+  height:75px;
+  z-index:9;
+  border-radius: 24px;
+  font-size:25px;
+  float:middle;
+  box-shadow:0 0 12px red;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup,.entireForm{
+  visibility :hidden;
+  display:block;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: none;
+  padding:10px;
+  z-index: 9;
+  background-color:#eee;
+  width:100%;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 500px;
+  width:100%;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid;
+  border-radius:25px;
+  z-index: 9;
+  background-color:#eee;
+  padding:10px;
+  margin-top:0px;
+}
+div.ex1 {
+  background-color:#ffc107;
+  width: 100%;
+  margin-top:5px;
+  height: 245px;
+  overflow: auto;
+  padding:20px;
+  border: 3px;
+  border-radius:25px;
+
+}
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 45px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+  width:100%;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .btn-cancel {
+  background-color:#002147;
+  width:100%;
+  height:50px;
+  border:none;
+  border-radius:25px;
+  font-size:large;
+  color:#fecb1c;
+}
+
+.btn-cancel:hover{
+  outline:none;
+}
+.close-button{
+  padding:10px;
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+}
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  overflow:auto;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  {% comment %} max-width: 55px; {% endcomment %}
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+.chat-box{
+  background-color: #ffc107;
+  border: 3px solid;
+  border-radius:25px;
+}
+.time-right {
+  float: right;
+  color: #000000;
+}
+.inbox_msg {
+  border: 1px solid #c4c4c4;
+  clear: both;
+  overflow: hidden;
+}
+
+.input_msg_write input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #4c4c4c;
+  font-size: 15px;
+  min-height: 48px;
+  width: 100%;
+  resize:none;
+}
+
+.type_msg {
+  border-top: 1px solid #c4c4c4;
+  position: relative;
+  background-color: rgba(0,0,0,0.3) !important;
+  border:0 !important;
+  color:white !important;
+  height: 60px !important;
+  overflow-y: auto;
+}
+.msg_send_btn {
+  background: #05728f none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 11px;
+  width: 33px;
+}
+.time-left {
+  float: left;
+  color: #000;
+}
+.card{
+  height: 500px;
+  border-radius: 15px !important;
+  background-color: white !important;
+}
+    .msg_card_body{
+  overflow-y: auto;
+}
+    .img_cont_msg{
+  height: 40px;
+  width: 40px;
+}
+      .msg_cotainer{
+margin-left: 10px;
+margin-top: auto;
+margin-bottom: auto;
+margin-right: 10px;
+border-radius: 15px;
+background-color: #002147;
+color:yellow;
+padding: 10px;
+position: relative;
+word-wrap: break-word;
+width:85%;
+}
+.msg_cotainer_send{
+margin-top: auto;
+margin-bottom: auto;
+margin-right: 10px;
+border-radius: 15px;
+background-color: #002147;
+color:yellow;
+padding: 10px;
+position: relative;
+word-wrap: break-word;
+width:85%;
+}
+.msg_time{
+position: absolute;
+left: 0;
+bottom: -15px;
+color: #000000;
+font-size: 10px;
+}
+.msg_time_send{
+position: absolute;
+right:0;
+bottom: -15px;
+color: #000000;
+font-size: 10px;
+}
+    .user_img{
+  height: 70px;
+  width: 70px;
+  border:1.5px solid #002147;
+
+}
+.user_img_msg{
+  height: 40px;
+  width: 40px;
+  border:1.5px solid #002147;
+
+}
+
+.textbox-inputs{
+  width:85%;
+  padding:12px;
+  border: 1px solid darkblue;
+  border-radius:25px;
+}
+
+.textbox-inputs:focus{
+  width:85%;
+  padding:12px;
+  border: 1px solid darkblue;
+  border-radius:25px;
+  box-shadow:0 0 12px blue;
+}
+
+.submit-button{
+  width:13%;
+  padding:12px;
+  background-color:#ffc107;
+}
+
+.submit-button:hover{
+  width:13%;
+  padding:12px;
+  background-color:#ffc107;
+}
+
+/* width */
+div.ex1::-webkit-scrollbar {
+  width: 5px;
+  height:100%;
+}
+
+/* Track */
+div.ex1::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 15px;
+  margin-top:6%;
+  margin-bottom:6%;
+}
+ 
+/* Handle */
+div.ex1::-webkit-scrollbar-thumb {
+  background: #002147; 
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+div.ex1::-webkit-scrollbar-thumb:hover {
+  background-color:#002147; 
+  
+}
+
+#send-icon{
+  border:none;
+  border-radius:25px solid #002147;
+  color:#002147;
+}
+
+#send-icon:hover{
+  border:none;
+  border-radius:25px solid #002147;
+  color:red;
+}
+
+
+.message-input{
+  padding:10px;
+  
+}
+
+input:focus{
+  outline: none;
+}
+.cgpit-logo{
+  padding:10px;
+  float: middle;
+}
+
+.IntroMessage{
+  margin-top:-2em;
+  background-color:#eee;
+}
+  </style>
+</head>
+   <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <!-- Top Contact Banner -->
+    <div class="top-banner-contact" style="background-color: #fecb1c; padding: 8px 0; text-align: center;">
+        <a href="tel:+91-98765 4321"><span class="fa fa-phone" aria-hidden="true"></span> +91-98765-43210</a>
+        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <a href="mailto:director.cgpit@utu.ac.in"><span class="fa fa-envelope" aria-hidden="true"></span>director.cgpit@utu.ac.in</a>
+    </div>
+    
+    <!-- Main Navigation -->
+    <nav style="background-color: #002147; position: relative;">
+        <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+            <!-- Logo -->
+            <div class="logo" style="flex: 1;">
+                <a href="https://cgpit-bardoli.edu.in//admission">
+                    <img src="static/images/cgpit1.png" style="height: 50px; max-width: 100%;" alt="College Logo">
+                </a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="desktop-menu" style="flex: 3; display: flex; justify-content: flex-end;">
+                <ul class="main-menu" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center;">
+                    <li style="padding: 0 15px;"><a href="https://cgpit-bardoli.edu.in//Aboutus" style="color: white; text-decoration: none;">AboutUs</a></li>
+                    <li style="padding: 0 15px;"><a href="https://cgpit-bardoli.edu.in//Manual/CGPIT PROSPECTUS  2019-20.pdf" target="_blank" style="color: white; text-decoration: none;">Prospectus</a></li>
+                    
+                    <!-- Under Graduate Dropdown -->
+                    <li class="dropdown" style="padding: 0 15px; position: relative;">
+                        <a href="#" style="color: white; text-decoration: none;">
+                            Under Graduate <span style="margin-left: 5px;">▼</span>
+                        </a>
+                        <ul class="dropdown-menu" style="display: none; position: absolute; background-color: #002147; min-width: 200px; z-index: 1; padding: 10px 0; margin: 0; list-style: none;">
+                            <li class="sub-dropdown" style="position: relative; padding: 5px 15px;">
+                                <a href="#" style="color: white; text-decoration: none;">
+                                    FE <span style="float: right;">▶</span>
+                                </a>
+                                <ul class="sub-dropdown-menu" style="display: none; position: absolute; left: 100%; top: 0; background-color: #002147; min-width: 200px; padding: 10px 0; margin: 0; list-style: none;">
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/Fee_Structure_2019-20_FE.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_FE.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//Manual/REQIRED DOCUMENTS FOR FE.pdf" target="_blank" style="color: white; text-decoration: none;">List of required document</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//Manual/FE DTE Instruction Manual.pdf" target="_blank" style="color: white; text-decoration: none;">DTE Instruction Manual</a></li>
+                                    <li style="padding: 5px 15px;"><a class="isDisabled" href="#" style="color: #ccc; text-decoration: none; cursor: not-allowed;">Merit List</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown" style="position: relative; padding: 5px 15px;">
+                                <a href="#" style="color: white; text-decoration: none;">
+                                    DSE <span style="float: right;">▶</span>
+                                </a>
+                                <ul class="sub-dropdown-menu" style="display: none; position: absolute; left: 100%; top: 0; background-color: #002147; min-width: 200px; padding: 10px 0; margin: 0; list-style: none;">
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/dse_fees.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_DSE.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//Manual/List of Required Documents for Direct Second Year.pdf" target="_blank" style="color: white; text-decoration: none;">List of required documents</a></li>
+                                    <li style="padding: 5px 15px;"><a class="isDisabled" href="#" style="color: #ccc; text-decoration: none; cursor: not-allowed;">Merit List</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Post Graduate Dropdown -->
+                    <li class="dropdown" style="padding: 0 15px; position: relative;">
+                        <a href="#" style="color: white; text-decoration: none;">
+                            Post Graduate <span style="margin-left: 5px;">▼</span>
+                        </a>
+                        <ul class="dropdown-menu" style="display: none; position: absolute; background-color: #002147; min-width: 200px; z-index: 1; padding: 10px 0; margin: 0; list-style: none;">
+                            <li class="sub-dropdown" style="position: relative; padding: 5px 15px;">
+                                <a href="#" style="color: white; text-decoration: none;">
+                                    MCA <span style="float: right;">▶</span>
+                                </a>
+                                <ul class="sub-dropdown-menu" style="display: none; position: absolute; left: 100%; top: 0; background-color: #002147; min-width: 200px; padding: 10px 0; margin: 0; list-style: none;">
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/Fee_Structure_2019-20_MCA.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_MCA.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//Manual/REQIRED DOCUMENTS FOR MCA.pdf" target="_blank" style="color: white; text-decoration: none;">List of required document</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//Manual/MCA DTE Instruction Manual.pdf" target="_blank" style="color: white; text-decoration: none;">DTE Instruction Manual</a></li>
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/Final Merit List for MCA 2019-2020.pdf" target="_blank" style="color: white; text-decoration: none;">Merit List</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-dropdown" style="position: relative; padding: 5px 15px;">
+                                <a href="#" style="color: white; text-decoration: none;">
+                                    ME <span style="float: right;">▶</span>
+                                </a>
+                                <ul class="sub-dropdown-menu" style="display: none; position: absolute; left: 100%; top: 0; background-color: #002147; min-width: 200px; padding: 10px 0; margin: 0; list-style: none;">
+                                    <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//pdfs/Fee_Structure_2019-20_ME.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                    <li style="padding: 5px 15px;"><a href="pdfs/INTAKE_2019-20_ME.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                    <li style="padding: 5px 15px;"><a class="isDisabled" href="#" style="color: #ccc; text-decoration: none; cursor: not-allowed;">Merit List</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Login/Register Dropdown -->
+                    <li class="dropdown" style="padding: 0 15px; position: relative;">
+                        <a href="#" style="color: white; text-decoration: none;">
+                            Login/Register <span style="margin-left: 5px;">▼</span>
+                        </a>
+                        <ul class="dropdown-menu" style="display: none; position: absolute; background-color: #002147; min-width: 200px; z-index: 1; padding: 10px 0; margin: 0; list-style: none;">
+                            <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//acpcInstruction" style="color: white; text-decoration: none;">ACPC Vacancy Form</a></li>
+                            <li style="padding: 5px 15px;"><a href="https://cgpit-bardoli.edu.in//dteInstruction" style="color: white; text-decoration: none;">DTE MQ Admission</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li style="padding: 0 15px;"><a href="https://cgpit-bardoli.edu.in/library/" style="color: white; text-decoration: none;">College Magazine</a></li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="mobile-menu-btn" style="display: none;">
+                <button id="mobileMenuToggle" style="background: none; border: none; color: white; font-size: 24px; cursor: pointer;">☰</button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" style="display: none; background-color: #002147; padding: 10px 20px;">
+            <ul style="list-style: none; margin: 0; padding: 0;">
+                <li style="padding: 10px 0; border-bottom: 1px solid #003366;"><a href="https://cgpit-bardoli.edu.in//Aboutus" style="color: white; text-decoration: none;">AboutUs</a></li>
+                <li style="padding: 10px 0; border-bottom: 1px solid #003366;"><a href="https://cgpit-bardoli.edu.in//Manual/CGPIT PROSPECTUS  2019-20.pdf" target="_blank" style="color: white; text-decoration: none;">Prospectus</a></li>
+                
+                <!-- Under Graduate Mobile Dropdown -->
+                <li class="mobile-dropdown" style="padding: 10px 0; border-bottom: 1px solid #003366;">
+                    <a href="#" style="color: white; text-decoration: none; display: block;">
+                        Under Graduate <span style="float: right;">+</span>
+                    </a>
+                    <ul class="mobile-submenu" style="display: none; list-style: none; margin: 10px 0 0 0; padding: 0 0 0 15px;">
+                        <li class="mobile-subdropdown" style="padding: 5px 0;">
+                            <a href="#" style="color: white; text-decoration: none; display: block;">
+                                FE <span style="float: right;">+</span>
+                            </a>
+                            <ul class="mobile-subsubmenu" style="display: none; list-style: none; margin: 5px 0 0 0; padding: 0 0 0 15px;">
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/Fee_Structure_2019-20_FE.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_FE.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//Manual/REQIRED DOCUMENTS FOR FE.pdf" target="_blank" style="color: white; text-decoration: none;">List of required document</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//Manual/FE DTE Instruction Manual.pdf" target="_blank" style="color: white; text-decoration: none;">DTE Instruction Manual</a></li>
+                                <li style="padding: 5px 0;"><a class="isDisabled" href="#" style="color: #ccc; text-decoration: none; cursor: not-allowed;">Merit List</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-subdropdown" style="padding: 5px 0;">
+                            <a href="#" style="color: white; text-decoration: none; display: block;">
+                                DSE <span style="float: right;">+</span>
+                            </a>
+                            <ul class="mobile-subsubmenu" style="display: none; list-style: none; margin: 5px 0 0 0; padding: 0 0 0 15px;">
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/dse_fees.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_DSE.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//Manual/List of Required Documents for Direct Second Year.pdf" target="_blank" style="color: white; text-decoration: none;">List of required documents</a></li>
+                                <li style="padding: 5px 0;"><a class="isDisabled" href="#" style="color: #ccc; text-decoration: none; cursor: not-allowed;">Merit List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Post Graduate Mobile Dropdown -->
+                <li class="mobile-dropdown" style="padding: 10px 0; border-bottom: 1px solid #003366;">
+                    <a href="#" style="color: white; text-decoration: none; display: block;">
+                        Post Graduate <span style="float: right;">+</span>
+                    </a>
+                    <ul class="mobile-submenu" style="display: none; list-style: none; margin: 10px 0 0 0; padding: 0 0 0 15px;">
+                        <li class="mobile-subdropdown" style="padding: 5px 0;">
+                            <a href="#" style="color: white; text-decoration: none; display: block;">
+                                MCA <span style="float: right;">+</span>
+                            </a>
+                            <ul class="mobile-subsubmenu" style="display: none; list-style: none; margin: 5px 0 0 0; padding: 0 0 0 15px;">
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/Fee_Structure_2019-20_MCA.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_MCA.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//Manual/REQIRED DOCUMENTS FOR MCA.pdf" target="_blank" style="color: white; text-decoration: none;">List of required document</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//Manual/MCA DTE Instruction Manual.pdf" target="_blank" style="color: white; text-decoration: none;">DTE Instruction Manual</a></li>
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/Final Merit List for MCA 2019-2020.pdf" target="_blank" style="color: white; text-decoration: none;">Merit List</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-subdropdown" style="padding: 5px 0;">
+                            <a href="#" style="color: white; text-decoration: none; display: block;">
+                                ME <span style="float: right;">+</span>
+                            </a>
+                            <ul class="mobile-subsubmenu" style="display: none; list-style: none; margin: 5px 0 0 0; padding: 0 0 0 15px;">
+                                <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//pdfs/Fee_Structure_2019-20_ME.pdf" target="_blank" style="color: white; text-decoration: none;">Fee Structure</a></li>
+                                <li style="padding: 5px 0;"><a href="pdfs/INTAKE_2019-20_ME.pdf" target="_blank" style="color: white; text-decoration: none;">Intake</a></li>
+                                <li style="padding: 5px 0;"><a class="isDisabled" href="#" style="color: #ccc; text-decoration: none; cursor: not-allowed;">Merit List</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                
+                <!-- Login/Register Mobile Dropdown -->
+                <li class="mobile-dropdown" style="padding: 10px 0; border-bottom: 1px solid #003366;">
+                    <a href="#" style="color: white; text-decoration: none; display: block;">
+                        Login/Register <span style="float: right;">+</span>
+                    </a>
+                    <ul class="mobile-submenu" style="display: none; list-style: none; margin: 10px 0 0 0; padding: 0 0 0 15px;">
+                        <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//ACPCInstruction" style="color: white; text-decoration: none;">ACPC Vacancy Form</a></li>
+                        <li style="padding: 5px 0;"><a href="https://cgpit-bardoli.edu.in//dteInstruction" style="color: white; text-decoration: none;">DTE CAP Admission</a></li>
+                    </ul>
+                </li>
+                
+                <li style="padding: 10px 0;"><a href="https://ves.ac.in/cgpit/newsletters/vishwakarma/vishwakarma-2018/" style="color: white; text-decoration: none;">College Magazine</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Add this after the header -->
+<style>
+    /* Responsive styles */
+    @media (max-width: 992px) {
+        .desktop-menu {
+            display: none !important;
+        }
+        .mobile-menu-btn {
+            display: block !important;
+        }
+    }
+    
+    @media (min-width: 993px) {
+        .mobile-menu {
+            display: none !important;
+        }
+    }
+    
+    /* Dropdown hover effects for desktop */
+    @media (min-width: 993px) {
+        .dropdown:hover .dropdown-menu {
+            display: block !important;
+        }
+        
+        .sub-dropdown:hover .sub-dropdown-menu {
+            display: block !important;
+        }
+    }
+    
+    /* Disabled link style */
+    .isDisabled {
+        color: #ccc !important;
+        cursor: not-allowed !important;
+        pointer-events: none !important;
+    }
+</style>
+
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobileMenuToggle').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenu.style.display === 'none') {
+            mobileMenu.style.display = 'block';
+        } else {
+            mobileMenu.style.display = 'none';
+        }
+    });
+    
+    // Mobile dropdown functionality
+    document.querySelectorAll('.mobile-dropdown > a').forEach(function(dropdown) {
+        dropdown.addEventListener('click', function(e) {
+            e.preventDefault();
+            var submenu = this.nextElementSibling;
+            if (submenu.style.display === 'none') {
+                submenu.style.display = 'block';
+                this.querySelector('span').textContent = '-';
+            } else {
+                submenu.style.display = 'none';
+                this.querySelector('span').textContent = '+';
+            }
+        });
+    });
+    
+    // Mobile sub-dropdown functionality
+    document.querySelectorAll('.mobile-subdropdown > a').forEach(function(subdropdown) {
+        subdropdown.addEventListener('click', function(e) {
+            e.preventDefault();
+            var subsubmenu = this.nextElementSibling;
+            if (subsubmenu.style.display === 'none') {
+                subsubmenu.style.display = 'block';
+                this.querySelector('span').textContent = '-';
+            } else {
+                subsubmenu.style.display = 'none';
+                this.querySelector('span').textContent = '+';
+            }
+        });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('#mobileMenu') && !e.target.closest('#mobileMenuToggle') && window.innerWidth <= 992) {
+            document.getElementById('mobileMenu').style.display = 'none';
+        }
+    });
+    
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(window).on('load', function() {
+  // Animate loader off screen
+  $(".se-pre-con").fadeOut("slow");
+
+  if ($('#message-boxes').hasScrollBar()) {
+    loader();
+  }
+});
+
+
+</script>
+  <div class="row">
+
+  <button class="open-button" onclick="openForm()"><img class="open-button" src="static/images/chatbot.png" ></button>
+  <div class="entireForm" id="entire-Form">  
+  <div class="chat-popup" id="myForm">
+    <form action="CgpitChatbot" method="POST" class="form-container" onsubmit="return true;" autocomplete="off">
+      {% csrf_token %} 
+      
+      <div class="chat-box">
+      <div class="ex1" id="message-boxes">
+        <div class="d-flex justify-content-start mb-4">
+          <div class="img_cont_msg">
+            <img src="{% static 'images/cgpit1.png' %}" class="rounded-circle user_img_msg">
+          </div>
+          <div class="msg_cotainer">
+            <b>Hey There!....I am CGPIT BOT.You can ask questions to me!</b>
+          </div>
+        </div>
+        <div class="card-body msg_card_body" id="a" style='display: none;'>
+          <div class="d-flex justify-content-start mb-4">
+            <div class="img_cont_msg">
+              <img src="{% static 'images/cgpit1.png' %}" class="rounded-circle user_img_msg">  
+          </div>
+          <div class="msg_cotainer">
+            <div class="spinner-grow spinner-grow-sm text-warning"></div><div class="spinner-grow spinner-grow-sm text-warning"></div><div class="spinner-grow spinner-grow-sm text-warning"></div><div class="spinner-grow spinner-grow-sm text-warning"></div><div class="spinner-grow spinner-grow-sm text-warning"></div><div class="spinner-grow spinner-grow-sm text-warning"></div><div class="spinner-grow spinner-grow-sm text-warning"></div>
+            <span class="msg_time">
+              {{k}}
+            </span>
+          </div>
+        </div>
+      </div>  
+      <!--<div class="spinner-grow text-primary" id="b" style='display: none;'></div>-->
+        <!--
+        {% for i,j,k in data %}
+        
+
+          <div class="d-flex justify-content-end mb-4">
+            <div class="msg_cotainer_send">
+              <a href="#">{{my_links}}</a>-->
+             <!--<b>{{i}}</b>
+              <span class="msg_time_send">
+                {{k}}
+              </span>
+            </div>
+            <div class="img_cont_msg">
+              <img src="{% static 'images/users.png' %}" class="rounded-circle user_img_msg">
+            </div>
+          </div>-->
+
+          <!--<div class="card-body msg_card_body">
+            <div class="d-flex justify-content-start mb-4">
+              <div class="img_cont_msg">
+                <img src="{% static 'images/cgpit.png' %}" class="rounded-circle user_img_msg">
+              </div>
+              <div class="msg_cotainer">
+                <b>{{j}}</b>
+                <span class="msg_time">
+                  {{k}}
+                </span>
+              </div>
+            </div>
+        </div>
+        
+        {% endfor %}-->
+    </div>
+		<div class="message-input">
+			<div class="wrap">
+        <input id="submissionDate" type="hidden" name="submissionDate" value="">
+      <input class="textbox-inputs" autocomplete="off" type="text" name="userMsg" id="UserMsg" placeholder="Write your message..." ><button class="submit-button"><i class="fa fa-paper-plane" id="send-icon" aria-hidden="true" ></i></button>
+			</div>
+		</div>
+    </div>
+    <div class="close-button">
+      <button type="button" class="btn-cancel" onclick="closeForm()">Close</button>
+    </div>
+
+  </form>
+    </div>
+  </div>
+ </div>
+</div>
+<script>
+  window.onload = function(){
+    var dateStr = ((new Date()).getHours()).toString()+":" +((new Date()).getMinutes()).toString();
+    var dateInput = document.getElementById('submissionDate');
+    dateInput.value=dateStr;
+  }
+  </script>
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.visibility = "visible";
+      document.getElementById("myForm").style.display = "block";
+      //document.getElementById("entire-Form").style.visibility = "visible";
+      //document.getElementById("entire-Form").style.display = "block";
+    }
+    
+    function closeForm() {
+      //document.getElementById("entire-Form").style.visibility = "hidden";
+      document.getElementById("myForm").style.display = "none";
+    }
+
+    chatWindow = document.getElementById("message-boxes"); 
+    var xH = (chatWindow.scrollHeight); 
+    chatWindow.scrollTo(0, xH);
+
+    function loader(){
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("myForm").style.visibility = "visible";
+      }
+    </script>
+	<div class="col-md-3">
+		<h3 style="font-size: 18px;">Latest News ::  </h3>
+	</div>
+	<div class="col-md-9">
+		<marquee direction="left">
+			<ul class="list-inline" style="margin-top: 12px;  font-weight:bold;">
+							  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>There is no vacancy in DSE in any Branch as on 4th Sept 2019 at 12:30 pm. Counseling will be conducted as per schedule in case, vacancy arries. Vacancy position  on 5th Sept 2019 will be displayed   at 10.30am (college website).</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>Special round of counseling for FE on 29/8/19, 30/8/19 &amp; 31/8/19.For details read notice</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>Sale of forms for ACPC has been extended upto 31st August 2019(upto 2:00pm) for FE</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>Sale of forms for ACPC vacancy from 2nd august to 24th august for DSE.</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>Sale of forms for ACPC vacancy from 2nd august to 9th august for FE/ME/MCA.</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>For Technical Queries call or whatsapp between 11:00 a.m. - 5:00 p.m.</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>Increase in intake of Information Technology from 60 to 120</li>
+			 				  		<li class="list-inline-item" style="font-size: 16px; color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cgpit-bardoli.edu.in//images/new.gif" style="height:30px;" max-width="100%"/>For Technical Queries, Contact : 9136132532</li>
+			 				</ul>
+		</marquee>
+	</div>
+
+</div>
+<div class="row" style="margin-bottom: 250px">
+	<div class="col-md-3" id="menu1">
+		<!--<div class="row">-->
+		<!--	<div class="card" style="width: 100%;height: 20rem">-->
+		<!--	  <div class="card-body">-->
+		<!--	    <h5 class="card-title">Intake</h5>-->
+		<!--	    <hr>-->
+		<!--	    	<ul>-->
+		<!--	    		<li><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_FE.pdf" target="_blank">FE Intake</a></li>-->
+		<!--	    		<li><a  href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_DSE.pdf" target="_blank">DSE Intake</a></li>-->
+		<!--	    		<li><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_ME.pdf" target="_blank">ME Intake</a></li>-->
+		<!--	    		<li><a href="https://cgpit-bardoli.edu.in//pdfs/INTAKE_2019-20_MCA.pdf" target="_blank">MCA Intake</a></li>		-->
+		<!--	    	</ul>-->
+		<!--	  </div>-->
+		<!--	</div>-->
+		<!--</div>-->
+		<div class="row">
+			<div class="card" style="width: 100%;height: 29rem">
+			  <div class="card-body">
+			    <h5 class="card-title">Schedule/Merit List for ACPC</h5>
+			    <hr>
+			    	<ul>
+			    	    <li>No Data Available</li>
+			    		<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/MODIFIED MERIT LIST FOR SPECIAL ROUND.pdf" target="_blank">Provisional Merit List for FE Special counseling Round 1 2019-2020</a></li>        -->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/FE_Final_merit_open.pdf" target="_blank">Final Merit List for FE (Open Category) 2019-2020</a></li>-->    
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/FE_Final_merit_minority.pdf" target="_blank">Final Merit List for FE (Sindhi Minority) 2019-2020</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/Provisional Merit List for FE Open 2019-2020.pdf" target="_blank">Provisional Merit List for FE (Open Category) 2019-2020</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/Provisional Merit List for FE Sindhi 2019-2020.pdf" target="_blank">Provisional Merit List for FE (Sindhi Minority) 2019-2020</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/Final Merit List for MCA 2019-2020.pdf" target="_blank">Final Merit List for MCA 2019-2020</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/Provisional Merit List for MCA 2019-2020.pdf" target="_blank">Provisional Merit List for MCA 2019-2020</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/schedule FE ACPC.pdf" target="_blank">Revised FE Open ACPC Schedule</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/FE ACPC sindhi.pdf" target="_blank">Revised FE Minority ACPC Schedule</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/MCA Open.pdf" target="_blank">Revised MCA Open ACPC Schedule</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/DSE Provisional Merit List(Group A Open).pdf" target="_blank">DSE Provisional Merit List(Group A Open)</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/DSE Provisional Merit List(Group A Sindhi).pdf" target="_blank">DSE Provisional Merit List(Group A Sindhi)</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/DSE Provisional Merit List(Group B Open).pdf" target="_blank">DSE Provisional Merit List(Group B Open)</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/DSE Provisional Merit List(Group C Open).pdf" target="_blank">DSE Provisional Merit List(Group C Open)</a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/MCA Merit List.pdf" target="_blank">MCA-Provisional Merit List(3-8-2019) </a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/FE Merit List Open.pdf" target="_blank">FE-Provisional Merit List-Open(3-8-2019) </a></li>-->
+			    	<!--<li><a href="https://cgpit-bardoli.edu.in//pdfs/FE Merit List Sindhi.pdf" target="_blank">FE-Provisional Merit List-Sindhi(3-8-2019) </a></li>-->
+			    	</ul>
+			    	
+			  </div>
+			</div>
+		</div>
+		
+		<div class="row mt-4">
+			<div class="card" style="width: 100%;height: 18rem">
+			  <div class="card-body">
+			    <h5 class="card-title">Vacancy Position</h5>
+			    <hr>
+			    	<ul>
+			    		<!--<li><a href="https://cgpit.ac.in/wp-content/uploads/2019/06/Placement_Statistics_2018-19.pdf" class="card-text" target="_blank" style="text-decoration: underline;">Placement Statistics</a></li>-->
+			    	    <!--<li>CMPN-I  &nbsp&nbsp&nbsp&nbsp:   0</li>-->
+			    	    <!--<li>CMPN-II &nbsp&nbsp:   0</li>-->
+			    	    <!--<li>EXTC    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:   6</li>-->
+			    	    <!--<li>ETRX    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:   54</li>-->
+			    	    <!--<li>INST    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:   22</li>-->
+			    	    <!--<li>INFT    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp:   0</li>-->
+			    	    			    	    <li>No Data Available</li>
+
+			    	</ul>
+			  </div>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="card" style="width: 100%;height: 24rem">
+				  <div class="card-body">
+				    <h5 class="card-title">Hostel</h5>
+				    <hr>
+				    <div class="row">
+				    	<div class="col-md-12">
+				    		<img src="https://cgpit-bardoli.edu.in//images/HOSTEL2.jpg" alt="Hostel" height="400" class="class="card-img-top" />
+				    	</div>
+				    	<!-- <div class="col-md-12">
+				    		<a href="https://ves.ac.in/facilities/hostels/" target="_blank"">More Info</a>
+				    	</div> -->
+				    </div>
+				  </div>
+				  <div class="card-footer bg-transparent border-dark">
+				  	<a href="https://ves.ac.in/facilities/hostels/" target="_blank"">More Info. About Hostel</a>
+				  </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 ml-0" id="#main" style="margin-left: 0px;">
+		<div class="card" style="width: 100%;height: 100%;margin-left: 0px;">
+		  <div class="card-body">	
+			<div class="row">
+				<div class="col-md-12">
+					<div class="js-video [vimeo, widescreen]"><iframe width="100%" height="315" src="https://www.youtube.com/embed/HwBmsb8hbrs?si=GMH5jpk9YRczMsSm" frameborder="0" allowfullscreen></iframe></div>
+					<h3 align="center">Note: Our Institute 12th Convocation Glimps</h3>
+				</div>
+				<div class="col-md-12">
+					<h4>100% Admission is through ACPC Conducted by Gujarat Board</h4>
+					<h4>Against MQ Vacancy Admission will be purely based on merit as per A.C.P.C. Rules & Regulations.</h4>
+				</div>
+				<div class="col-md-12">
+				<hr>
+					<h3 align="center"> Anti-ragging</h3>
+					<div class="js-video [vimeo, widescreen]">
+						<iframe width="100%" height="315" src="https://www.youtube.com/embed/BjcynOHs0qQ" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+					<hr>
+					<h3 align="center">Video of Glimps</h3>
+<div class="js-video [vimeo, widescreen]">
+						<iframe width="100%" height="315" src="https://www.youtube.com/embed/D4C950U0NfE?si=dNdqJr8TO4Rpyn0b" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+ 		  </div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="row">
+		
+			<div class="card" style="width: 100%;">
+			  <div class="card-body">
+			    <h5 class="card-title">Event Notice</h5>
+			    <hr>
+			    <div class="card-text">
+			    	<!--<marquee direction="up" onmouseover="this.stop();" onmouseout="this.start();" style="height: 12rem;">-->
+			    	
+        <!--                <ul>-->
+			    	<!--	-->
+		               <li><a href="https://cgpit-bardoli.edu.in/bodhi-kruti-project-exhibition-2025/" target="_blank" class="card-text">“Bodhi Kruti – Project Exhibition 2025” – Showcasing Innovation & Excellence at CGPIT, UTU. Be a part of the future of innovation on 4th April 2025!
+</a></li>
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/DSE Provisional Merit List(Group B OPEN).pdf" target="_blank" class="card-text">DSE Provisional Merit List(Group B OPEN)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/DSE Provisional Merit List(Group A Sindhi).pdf" target="_blank" class="card-text">DSE Provisional Merit List(Group A Sindhi)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/DSE Provisional Merit List(Group A Open).pdf" target="_blank" class="card-text">DSE Provisional Merit List(Group A Open)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Schedule for DSE ACPC.pdf" target="_blank" class="card-text">Schedule for DSE ACPC</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Special round of counseling for FE on 29-8-19, 30-8-19 &amp; 31-8-19..pdf" target="_blank" class="card-text">Special round of counseling for FE on 29-8-19, 30-8-19 &amp; 31-8-19.</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Procedure for ACPC Counseling Rounds.pdf" target="_blank" class="card-text">Procedure for ACPC Counseling Rounds</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Advertisement 1 (8th July 2019).pdf" target="_blank" class="card-text">Advertisement 1 (8th July 2019)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Advertisement 2 ( 2nd August 2019).pdf" target="_blank" class="card-text">Advertisement 2 ( 2nd August 2019)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Click Here for ACPC Applications.pdf" target="_blank" class="card-text">Click Here for ACPC Applications</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Instructions for Candidates those who freezed their admission in CGPIT.pdf" target="_blank" class="card-text">Instructions for Candidates those who freezed their admission in CGPIT</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Procedure for Cancellation.pdf" target="_blank" class="card-text">Procedure for Cancellation</a></li>-->
+		      <!--          -->
+			    	<!--    </ul>-->
+			    		
+			    	<!--</marquee>-->
+			    	<ul>
+			    	    			    	    <li>No Data Available</li>
+
+			    	</ul>
+			    </div>
+			    
+			  </div>
+			</div>
+		</div>
+		<div class="row mt-4">
+			<div class="card" style="width: 100%;">
+			  <div class="card-body">
+			    <h5 class="card-title">Post Graduate Notice</h5>
+			    <hr>
+			    <div class="card-text">
+			    	<!--<marquee direction="up"  onmouseover="this.stop();" onmouseout="this.start();" style="height: 12rem;">-->
+
+			    	<!--	<ul>-->
+        <!--                -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Procedure for ACPC Counseling Rounds.pdf" target="_blank" class="card-text">Procedure for ACPC Counseling Rounds</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Provisional Merit List for MCA 2019-2020.pdf" target="_blank" class="card-text">Provisional Merit List for MCA 2019-2020</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Advertisement 1 (8th July 2019).pdf" target="_blank" class="card-text">Advertisement 1 (8th July 2019)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Advertisement 2 (2nd August 2019).pdf" target="_blank" class="card-text">Advertisement 2 (2nd August 2019)</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Click Here for ACPC Applications.pdf" target="_blank" class="card-text">Click Here for ACPC Applications</a></li>-->
+		      <!--          -->
+		      <!--           <li><a href="https://cgpitadmissions.ves.ac.in/admissionForms/pg/public/notices/Procedure for Cancellation.pdf" target="_blank" class="card-text">Procedure for Cancellation</a></li>-->
+		      <!--          -->
+		      <!--          </ul>-->
+
+			    	
+			    		
+			    	<!--</marquee>-->
+			    		<ul>
+			    	    			    	    <li>No Data Available</li>
+
+			    	</ul>
+			    </div>
+			   
+			  </div>
+			</div>
+
+		</div>
+		<div class="row mt-4">
+			<div class="card" style="width: 100%;height: 21rem">
+				  <div class="card-body">
+				    <h5 class="card-title">Important Links</h5>
+				    <hr>
+				    	<ul>
+				    		<li>
+				    			<a href="https://www.aicte-india.org/" target="_blank" style="text-decoration: underline;">All India Council For Technical Education</a>
+				    		</li>
+				    	<!--	<li>
+				    			<a href="https://www.maha2019cap.org" target="_blank" style="text-decoration: underline;"> Mahacpc 2019</a>
+				    		</li>-->
+				    	</ul>
+				  </div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+      </div>
+
+      <!-- Scripts -->
+      <script src="https://cgpit-bardoli.edu.in//js/app.js"></script>
+      <script>
+        (function($) {
+          $.fn.hasScrollBar = function() {
+              return (this.get(0).scrollHeight > 245);
+          }
+      })(jQuery);
+      
+      </script>
+      <script>
+        $( document ).ready(function() {
+
+            var csrf=$("input[name=csrfmiddlewaretoken]").val();
+
+            $('.submit-button').on('click', function(e){
+
+                $.ajax({
+                  url:  '/CgpitChatbot',
+                  type: 'POST',
+                  async: true,
+                  dataType: 'json',
+                  enctype: 'multipart/form-data',
+                  cache: false,
+                  data:{
+                      UserMsg:$('#UserMsg').val(),
+                      submissionDate:$('#submissionDate').val(),
+                      csrfmiddlewaretoken:csrf,
+                  },
+                  beforeSend: function(){
+                    // Show image container
+                  $(".ex1").append(
+                    '<div class="d-flex justify-content-end mb-4">'+
+                      '<div class="msg_cotainer_send">'+
+                       '<b>'+$('#UserMsg').val()+'</b>'+
+                        '<span class="msg_time_send">'+
+                          $('#submissionDate').val()+
+                        '</span>'+
+                      '</div>'+
+                      '<div class="img_cont_msg">'+
+                        '<img src="{% static 'images/users.png' %}" class="rounded-circle user_img_msg">'+
+                      '</div>'+
+                    '</div>');
+                    $('.ex1').append($("#a").show(),$("#b").show());
+                    chatWindow = document.getElementById("message-boxes"); 
+                    var xH = (chatWindow.scrollHeight); 
+                    chatWindow.scrollTo(0, xH);
+                    //$('.ex1').append($("#b").show());
+                   },
+                   complete:function(data){
+                    // Hide image container
+                    $('#a').hide();
+                    $('#b').hide();
+                    chatWindow = document.getElementById("message-boxes"); 
+                    var xH = (chatWindow.scrollHeight); 
+                    chatWindow.scrollTo(0, xH);
+                  },
+                  success: function(response){
+                        $('#UserMsg').val("");
+                        if((response.ChatbotA).includes("http")){
+                          response.ChatbotA+='.Please visit the given link or webiste for more details'
+                        }
+                        else{
+                          response.ChatbotA
+                        }
+                        $('.ex1').append(              
+                        '<div class="card-body msg_card_body">'+
+                          '<div class="d-flex justify-content-start mb-4">'+
+                            '<div class="img_cont_msg">'+
+                              '<img src="{% static 'images/cgpit1.png' %}" class="rounded-circle user_img_msg">'+
+                            '</div>'+
+                            '<div class="msg_cotainer">'+
+                              '<b>'+response.ChatbotA+'</b>'+
+                              '<span class="msg_time">'+
+                                response.userTime+
+                              '</span>'+
+                            '</div>'+
+                          '</div>'+
+                      '</div>');
+                      chatWindow = document.getElementById("message-boxes"); 
+                      var xH = (chatWindow.scrollHeight*90)/100; 
+                      chatWindow.scrollTo(0, xH);
+                        },
+                        error: function(){}
+                });
+                e.stopImmediatePropagation();
+                return false;
+            });
+
+        });
+      </script>
+   </body>
+   <footer class="footer" id="foot" style="height: auto;">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6" style="text-align:center;display:inline-block;">
+              <ul style="text-align:center;display:inline-block;">
+                  <li style="text-align:center;display:inline-block;font-size: 15px;">
+                    <a href="https://cgpit-bardoli.edu.in//contact" style="color: #ffffff">Contact Us</a>
+                  </li>
+                  <li style="text-align:center;display:inline-block;margin-left:20px;font-size: 15px;">
+                    <a href="https://cgpit-bardoli.edu.in//feedback" style="color: #ffffff">Suggestion Box</a>
+                  </li>
+                   <li style="text-align:center;display:inline-block;margin-left:20px;font-size: 15px;">
+                    <a href="https://cgpit-bardoli.edu.in//faq" style="color: #ffffff">FAQ</a>
+                  </li>
+              </ul>
+            </div>
+            <div class="col-md-3"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+                <hr class="deep-purple accent-1 mb-2 mt-0 d-inline-block mx-auto" style="width: 100%;">
+         <p class="text-muted">&copy; 2017 <a href="https://cgpit-bardoli.edu.in/">Chhotubhai Gopalbhai Patel Institute of Technology</a></p>
+      
+            </div>
+          </div>
+      </div>
+   </footer>
+  
+</html>     
