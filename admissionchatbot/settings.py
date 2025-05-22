@@ -14,7 +14,18 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import nltk
 
+# Configure NLTK
+NLTK_DIR = os.path.join(BASE_DIR, 'nltk_data')
+os.makedirs(NLTK_DIR, exist_ok=True)
+nltk.data.path.append(NLTK_DIR)
+
+# Force download if missing
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', download_dir=NLTK_DIR)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
