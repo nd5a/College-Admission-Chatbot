@@ -38,7 +38,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [ 'localhost',
     '127.0.0.1',
-    'dn-collge-inquiry-bot.onrender.com',
+    'dn-college-inquiry-bot.onrender.com',
     '.onrender.com']
 
 
