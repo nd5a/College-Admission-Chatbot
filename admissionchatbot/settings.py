@@ -23,7 +23,7 @@ nltk.data.path.append(NLTK_DIR)
 
 # Force download if missing
 try:
-    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
 except LookupError:
     nltk.download('punkt', download_dir=NLTK_DIR)
 
