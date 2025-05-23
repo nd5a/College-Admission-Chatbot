@@ -156,7 +156,8 @@ if not DEBUG:
 
 # Model Configuration
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 0=`all, 1=info, 2=warnings, 3=errors
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1
 # TensorFlow Memory Optimization
 if not DEBUG:
     import tensorflow as tf
