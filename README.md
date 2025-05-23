@@ -6,8 +6,11 @@ An AI-powered chatbot built with Django and NLP to handle college admission quer
 
 ---
 ![Screenshot 2025-05-23 194601](https://github.com/user-attachments/assets/24a858f2-4b24-4777-9c56-ce8a2545f241)
+---
 ![Screenshot 2025-05-23 194552](https://github.com/user-attachments/assets/912cb399-8cda-4d65-ac1d-1351dbe9dd21)
+---
 ![Screenshot 2025-05-23 194541](https://github.com/user-attachments/assets/cf7ab818-ece0-4489-bb1f-81748b16ab6d)
+---
 
 ## Features ✨
 - **NLP Processing**: Intent detection using NLTK and TextBlob
@@ -122,4 +125,3 @@ MIT License - See [LICENSE](LICENSE)
 ---
 
 **Note:** Replace all `your-domain` references with your actual domain name before deployment.
-```
