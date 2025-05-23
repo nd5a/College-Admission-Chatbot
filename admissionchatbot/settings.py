@@ -34,7 +34,7 @@ except LookupError:
 SECRET_KEY = 'q!f3b!8jhlw7-_qft0(s7$bo6ctg$f$9hrv2^jqh276f&170+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 USE_X_FORWARDED_HOST = True
 SESSION_COOKIE_SECURE = True
