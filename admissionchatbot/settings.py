@@ -35,12 +35,23 @@ SECRET_KEY = 'q!f3b!8jhlw7-_qft0(s7$bo6ctg$f$9hrv2^jqh276f&170+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 ALLOWED_HOSTS = [ 'localhost',
     '127.0.0.1',
     'dn-college-inquiry-bot.onrender.com',
     '.onrender.com']
+# Below ALLOWED_HOSTS add:
+CSRF_TRUSTED_ORIGINS = [
+    'https://dn-college-inquiry-bot.onrender.com',
+    'https://*.onrender.com'
+]
 
+CORS_ALLOWED_ORIGINS = [
+    'https://dn-college-inquiry-bot.onrender.com'
+]
 
 # Application definition
 
@@ -51,10 +62,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders', 
     'cgpit',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware', 
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
